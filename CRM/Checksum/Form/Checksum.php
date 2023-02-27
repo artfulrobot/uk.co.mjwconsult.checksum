@@ -9,6 +9,8 @@
  +--------------------------------------------------------------------+
  */
 
+use CRM_Checksum_ExtensionUtil as E;
+
 /**
  * Class CRM_Checksum_Form_Checksum
  */
@@ -34,6 +36,8 @@ class CRM_Checksum_Form_Checksum extends CRM_Core_Form {
         }
       }
     }
+
+    $this->assign('contactchecksumjs', E::url('js/contactchecksum.js'));
 
     //$payment = new CRM_Core_Payment_Dummy();
     //$payment->subscriptionURL(NULL, NULL, 'cancel');
